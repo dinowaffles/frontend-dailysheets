@@ -28,3 +28,10 @@
 
 
 - Day 10 (Fri): Presentation
+
+
+Bonus items: 
+- Sort/search student list
+- Archive in calendar view
+- Login/security
+- Email notifications
