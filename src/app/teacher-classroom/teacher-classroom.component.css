@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+.row {
+    font-family: 'Roboto', sans-serif;
+    padding-top: 16px; 
+}
+
+.btn-primary {
+    background-color: #51bfa6 !important;
+    border-color: #184655 !important;
+    color: black !important;
+}
+
+.btn-primary:hover{
+    background-color: #96d9c8 !important;
+}

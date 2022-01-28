@@ -16,3 +16,10 @@
     height: 100vh;
 }
 
+.img-attribute {
+    font-size: 12px;
+    text-decoration: none;
+    color: black;
+    float: right;
+}
+
