@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+.nav-container {
+    background-color: #86b2f3;
+    font-family: 'Acme', sans-serif;
+}
+
+.navbar-brand {
+    font-size: 32px; 
+    padding-left: 24px; 
+}
 
 .hero-img {
     background-image: url("./../assets/images/landing-background.jpg");
