@@ -14,3 +14,13 @@
 .btn-primary:hover{
     background-color: #96d9c8 !important;
 }
+
+.btn-danger {
+    background-color: #f47457 !important;
+    border-color: black !important;
+    color: black !important;
+}
+
+.btn-danger:hover {
+    background-color: #f7a492 !important;
+}
