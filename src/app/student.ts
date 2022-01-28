@@ -1,5 +1,5 @@
 export class Student {
-    id: number | undefined;
+    id!: number;
     name: string | undefined;
     classroom: string | undefined;
 }

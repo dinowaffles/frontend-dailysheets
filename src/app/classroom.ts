@@ -1,5 +1,5 @@
 export class Classroom {
-    id: number | undefined;
+    id!: number;
     name: string | undefined;
     ageGroup: string | undefined;
 }

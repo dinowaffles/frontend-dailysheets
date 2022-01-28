@@ -1,1 +1,28 @@
-<p>classroom-list works!</p>
+<div class="whole-page">
+
+    <div class="row">
+        <h2>Classroom List</h2>
+    </div>
+
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th> Name </th>
+                <th> Age Group </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let classroom of classrooms">
+                <td>{{classroom.name}}</td>
+                <td>{{classroom.ageGroup}}</td>
+                <td>
+                    <button (click)="updateClassroom(classroom.id)" 
+                        class = "btn btn-primary">Update</button>
+                    <button (click)="deleteClassroom(classroom.id)" 
+                        class = "btn btn-danger" style="margin-left: 10px">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>

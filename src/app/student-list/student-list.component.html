@@ -1,1 +1,28 @@
-<p>student-list works!</p>
+<div class="whole-page">
+
+    <div class="row">
+        <h2>Student List</h2>
+    </div>
+
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th> Name </th>
+                <th> Classroom </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of students">
+                <td>{{student.name}}</td>
+                <td>{{student.classroom}}</td>
+                <td>
+                    <button (click)="updateStudent(student.id)" 
+                        class = "btn btn-primary">Update</button>
+                    <button (click)="deleteStudent(student.id)" 
+                        class = "btn btn-danger" style="margin-left: 10px">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>
