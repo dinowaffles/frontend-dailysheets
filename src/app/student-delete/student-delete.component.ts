@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { StudentService } from '../student.service';
+import { Classroom } from '../classroom';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Student } from '../student';
 
 @Component({
   selector: 'app-student-delete',
@@ -7,9 +11,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentDeleteComponent implements OnInit {
 
-  constructor() { }
+  id!: number;
+  student: Student = new Student();
+
+  constructor(private studentService: StudentService, 
+    private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
+    this.id = this.route.snapshot.params['id'];
+
+    this.studentService.getStudentById(this.id).subscribe(data => {
+      this.student = data;
+    }, 
+    // error => console.log(error)
+    );
+  }
+
+  onSubmit() {
+    this.studentService.deleteStudent(this.id).subscribe(data => {
+      this.goToStudentList();
+    }, 
+    // error => console.log(error)
+    )
+  }
+
+  goToStudentList() {
+    this.router.navigate(['/student']);
   }
 
 }
