@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Student } from '../student';
+import { StudentService } from '../student.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-student-create',
@@ -7,9 +10,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentCreateComponent implements OnInit {
 
-  constructor() { }
+  student: Student = new Student();
+
+  constructor(private studentService: StudentService, 
+    private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  saveStudent() {
+    this.studentService.addStudent(this.student).subscribe(data => {
+      console.log(data);
+      this.goToStudentList();
+    }, 
+    // error => console.log(error)
+    );
+  }
+
+  goToStudentList() {
+    this.router.navigate(['/student']);
+  }
+
+  onSubmit() {
+    console.log(this.student);
+    this.saveStudent();
   }
 
 }

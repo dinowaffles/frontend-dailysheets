@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Classroom } from '../classroom';
+import { ClassroomService } from '../classroom.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-classroom-create',
@@ -7,9 +10,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClassroomCreateComponent implements OnInit {
 
-  constructor() { }
+  classroom: Classroom = new Classroom();
+
+  constructor(private classroomService: ClassroomService,
+    private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  saveClassroom() {
+    this.classroomService.addClassroom(this.classroom).subscribe(data => {
+      console.log(data);
+      this.goToClassroomList();
+    },
+    // error => console.log(error)
+    );
+  }
+
+  goToClassroomList() {
+    this.router.navigate(['/classroom']);
+  }
+
+  onSubmit() {
+    console.log(this.classroom);
+    this.saveClassroom();
   }
 
 }

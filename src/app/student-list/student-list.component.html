@@ -17,12 +17,14 @@
                 <td>{{student.classroom}}</td>
                 <td>
                     <button (click)="updateStudent(student.id)" 
-                        class = "btn btn-primary">Update</button>
+                        class ="btn btn-primary">Update</button>
                     <button (click)="deleteStudent(student.id)" 
-                        class = "btn btn-danger" style="margin-left: 10px">Delete</button>
+                        class ="btn btn-danger" style="margin-left: 10px">Delete</button>
                 </td>
             </tr>
         </tbody>
     </table>
+    <button class="btn btn-primary" routerLink="/admin/student/add">
+        Add Student</button>
     
 </div>
