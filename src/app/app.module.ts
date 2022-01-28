@@ -14,6 +14,9 @@ import { ClassroomUpdateComponent } from './classroom-update/classroom-update.co
 import { ClassroomDeleteComponent } from './classroom-delete/classroom-delete.component';
 import { TeacherStudentComponent } from './teacher-student/teacher-student.component';
 import { ParentStudentComponent } from './parent-student/parent-student.component';
+import { TeacherComponent } from './teacher/teacher.component';
+import { ParentComponent } from './parent/parent.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { ParentStudentComponent } from './parent-student/parent-student.componen
     ClassroomUpdateComponent,
     ClassroomDeleteComponent,
     TeacherStudentComponent,
-    ParentStudentComponent
+    ParentStudentComponent,
+    TeacherComponent,
+    ParentComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
