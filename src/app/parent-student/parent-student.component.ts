@@ -11,7 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class ParentStudentComponent implements OnInit {
 
   id!: number;
-  sheet: Sheet | undefined;
+  sheet!: Sheet;
 
   constructor(private route: ActivatedRoute, 
     private sheetService: SheetService) { }

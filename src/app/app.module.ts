@@ -20,6 +20,8 @@ import { TeacherComponent } from './teacher/teacher.component';
 import { ParentComponent } from './parent/parent.component';
 import { AdminComponent } from './admin/admin.component';
 import { TeacherClassroomComponent } from './teacher-classroom/teacher-classroom.component';
+import { LandingComponent } from './landing/landing.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { TeacherClassroomComponent } from './teacher-classroom/teacher-classroom
     TeacherComponent,
     ParentComponent,
     AdminComponent,
-    TeacherClassroomComponent
+    TeacherClassroomComponent,
+    LandingComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

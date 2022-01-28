@@ -1,6 +1,6 @@
 <div class="nav-container">
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" routerLink="/" >Navbar</a>
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+  <a class="navbar-brand" routerLink="/" > Navbar </a>
 
   <div >
     <ul class="navbar-nav mr-auto">
@@ -21,6 +21,12 @@
     </ul>
   </div>
 </nav>
+</div>
+
+<div *ngIf="router.url==='/'">
+  <div class="hero-img"></div>
+  <a href="https://www.freepik.com/vectors/school">
+    School vector created by pch.vector - www.freepik.com</a>
 </div>
 
 <router-outlet></router-outlet>
