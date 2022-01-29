@@ -26,14 +26,11 @@ export class StudentListComponent implements OnInit {
   }
 
   updateStudent(id: number) {
-    this.router.navigate(['student-update', id]);
+    this.router.navigate(['/admin/student/update', id]);
   }
 
   deleteStudent(id: number) {
-    this.studentService.deleteStudent(id).subscribe(data => {
-      console.log(data);
-      this.getStudents();
-    })
+    this.router.navigate(['/admin/student/delete', id]);
   }
 
 }

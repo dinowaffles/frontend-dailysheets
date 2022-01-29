@@ -21,14 +21,14 @@ export class StudentCreateComponent implements OnInit {
   saveStudent() {
     this.studentService.addStudent(this.student).subscribe(data => {
       console.log(data);
-      this.goToStudentList();
+      this.goToAdminStudentList();
     }, 
     // error => console.log(error)
     );
   }
 
-  goToStudentList() {
-    this.router.navigate(['/student']);
+  goToAdminStudentList() {
+    this.router.navigate(['/admin/student']);
   }
 
   onSubmit() {

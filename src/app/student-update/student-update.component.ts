@@ -29,14 +29,14 @@ export class StudentUpdateComponent implements OnInit {
 
   onSubmit() {
     this.studentService.updateStudent(this.id, this.student).subscribe(data => {
-      this.goToStudentList();
+      this.goToAdminStudentList();
     }, 
     // error => console.log(error)
     )
   }
 
-  goToStudentList() {
-    this.router.navigate(['/student']);
+  goToAdminStudentList() {
+    this.router.navigate(['/admin/student']);
   }
 
 }
