@@ -21,14 +21,14 @@ export class ClassroomCreateComponent implements OnInit {
   saveClassroom() {
     this.classroomService.addClassroom(this.classroom).subscribe(data => {
       console.log(data);
-      this.goToClassroomList();
+      this.goToAdminClassroomList();
     },
     // error => console.log(error)
     );
   }
 
-  goToClassroomList() {
-    this.router.navigate(['/classroom']);
+  goToAdminClassroomList() {
+    this.router.navigate(['/admin/classroom']);
   }
 
   onSubmit() {

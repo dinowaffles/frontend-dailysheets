@@ -26,14 +26,11 @@ export class ClassroomListComponent implements OnInit {
   }
 
   updateClassroom(id: number) {
-    this.router.navigate(['classroom-update', id]);
+    this.router.navigate(['/admin/classroom/update', id]);
   }
 
   deleteClassroom(id: number) {
-    this.classroomService.deleteClassroom(id).subscribe(data => {
-      console.log(data);
-      this.getClassrooms();
-    })
+    this.router.navigate(['/admin/classroom/delete', id]);
   }
 
 }

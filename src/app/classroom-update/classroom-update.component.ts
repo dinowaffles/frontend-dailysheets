@@ -28,14 +28,14 @@ export class ClassroomUpdateComponent implements OnInit {
 
   onSubmit() {
     this.classroomService.updateClassroom(this.id, this.classroom).subscribe(data => {
-      this.goToClassroomList();
+      this.goToAdminClassroomList();
     }, 
     // error => console.log(error)
     );
   }
 
-  goToClassroomList() {
-    this.router.navigate(['/classroom']);
+  goToAdminClassroomList() {
+    this.router.navigate(['/admin/classroom']);
   }
 
 }
