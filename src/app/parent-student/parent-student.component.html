@@ -4,20 +4,66 @@
     </div>
 
     <div class="main-panel">
+        <h3 class="main-panel-header">DAILY SHEET</h3>
         <div class="card-columns">
-
-            <div class="card name-date col-md-6 offset-md-3 offset-md-3">
-                <div class="card-header sheet-header">Daily Sheet For: 
-
+            <div class="card-group name-date col-md-6 offset-md-3 offset-md-3">
+                <div class="card">
+                    <div class="card-header">Name: </div>
+                    <div class=card-body></div>
                 </div>
-                <div class="card-body"></div>
+                <div class="card">
+                    <div class="card-header">Date: </div>
+                    <div class=card-body></div>
+                </div>
             </div>
 
             <div class="card food col-md-6 offset-md-3 offset-md-3">
                 <div class="card-header">Food
-
                 </div>
-                <div class="card-body"></div>
+                <div class="card-body">
+                    <table class="food-table">
+                        <tr>
+                            <td class="text-center">Bottles</td>
+                            <td>
+                                <table class="bottles-table">
+                                    <tr>
+                                        <td>Time</td>
+                                        <td>8:00</td>
+                                        <td>10:00</td>
+                                        <td>12:00</td>
+                                        <td>2:00</td>
+                                        <td>4:00</td>
+                                    </tr>
+                                        <td>Amt(oz)</td>
+                                        <td>5</td>
+                                        <td>4</td>
+                                        <td>6</td>
+                                        <td>3</td>
+                                        <td>5</td>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">Meals</td>
+                            <td>
+                                <table class="meals-table">
+                                    <tr>
+                                        <td>Breakfast</td>
+                                        <td>All</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lunch</td>
+                                        <td>Some</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Snack</td>
+                                        <td>All</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
 
             <div class="card hygiene col-md-6 offset-md-3 offset-md-3">
@@ -34,30 +80,19 @@
                 <div class="card-body"></div>
             </div>
 
-            <div class="card activity col-md-6 offset-md-3 offset-md-3">
-                <div class="card-header">Activity 
-
+            <div class="card-group activity-needs col-md-6 offset-md-3 offset-md-3">
+                <div class="card">
+                    <div class="card-header">Activity </div>
+                    <div class=card-body></div>
                 </div>
-                <div class="card-body"></div>
-            </div>
 
-            <div class=" card needs col-md-6 offset-md-3 offset-md-3"> 
-                <div class="card-header">Needs 
-
+                <div class="card">
+                    <div class="card-header">Needs </div>
+                    <div class=card-body></div>
                 </div>
-                <div class="card-body"></div>
             </div>
-        </div>
 
 
-        <h3 class="header"> View Student's Daily Sheet</h3>
-        <div>
-            <div>
-                <label> <b> Name: </b></label> {{sheet.name}}
-            </div>
-            <div>
-                <label> <b> Date: </b></label> {{sheet.date}}
-            </div>
         </div>
     </div>
 

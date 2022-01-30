@@ -3,6 +3,12 @@
 
 .main-panel {
     padding-top: 16px; 
+    padding-bottom: 20px;
+}
+
+.main-panel-header {
+    font-family: 'Acme', sans-serif;
+    text-align: center;
 }
 
 .card-header {
@@ -16,4 +22,17 @@
 
 .card-body {
     font-family: 'Roboto', sans-serif;
+}
+
+table, td {
+    border: 1px solid black;
+    font-family: 'Roboto', sans-serif;
+}
+
+.food-table {
+    width: 100%;
+}
+
+.bottles-table, .meals-table {
+    width: 100%;
 }
