@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Classroom } from '../classroom';
 import { ClassroomService } from '../classroom.service';
 import { Router } from '@angular/router';
-
+ 
 @Component({
   selector: 'app-classroom-list',
   templateUrl: './classroom-list.component.html',
