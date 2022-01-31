@@ -13,7 +13,7 @@
                 </div>
                 <div class="card">
                     <div class="card-header">Date: </div>
-                    <div class=card-body></div>
+                    <div class=card-body>{{sheet.date}}</div>
                 </div>
             </div>
 
@@ -28,18 +28,18 @@
                                 <table class="bottles-table">
                                     <tr>
                                         <td>Time</td>
-                                        <td>8:00</td>
-                                        <td>10:00</td>
-                                        <td>12:00</td>
-                                        <td>2:00</td>
-                                        <td>4:00</td>
+                                        <td>{{sheet.feeding1Time}}</td>
+                                        <td>{{sheet.feeding2Time}}</td>
+                                        <td>{{sheet.feeding3Time}}</td>
+                                        <td>{{sheet.feeding4Time}}</td>
+                                        <td>{{sheet.feeding5Time}}</td>
                                     </tr>
                                         <td>Amt(oz)</td>
-                                        <td>5</td>
-                                        <td>4</td>
-                                        <td>6</td>
-                                        <td>3</td>
-                                        <td>5</td>
+                                        <td>{{sheet.feeding1Amt}}</td>
+                                        <td>{{sheet.feeding2Amt}}</td>
+                                        <td>{{sheet.feeding3Amt}}</td>
+                                        <td>{{sheet.feeding4Amt}}</td>
+                                        <td>{{sheet.feeding5Amt}}</td>
                                 </table>
                             </td>
                         </tr>
@@ -49,15 +49,15 @@
                                 <table class="meals-table">
                                     <tr>
                                         <td class="meal-desc">Breakfast</td>
-                                        <td>All</td>
+                                        <td>{{sheet.breakfastAmt}}</td>
                                     </tr>
                                     <tr>
                                         <td class="meal-desc">Lunch</td>
-                                        <td>Some</td>
+                                        <td>{{sheet.lunchAmt}}</td>
                                     </tr>
                                     <tr>
                                         <td class="meal-desc">Snack</td>
-                                        <td>All</td>
+                                        <td>{{sheet.snackAmt}}</td>
                                     </tr>
                                 </table>
                             </td>
@@ -76,28 +76,28 @@
                             <td class="text-center">Description</td>
                         </tr>
                         <tr>
-                            <td class="hygiene-time">8:30</td>
-                            <td>Pee</td>
+                            <td class="hygiene-time">{{sheet.diaper1Time}} {{sheet.potty1Time}}</td>
+                            <td>{{sheet.diaper1Description}} {{sheet.potty1Description}}</td>
                         </tr>
                         <tr>
-                            <td class="hygiene-time"></td>
-                            <td></td>
+                            <td class="hygiene-time">{{sheet.diaper2Time}} {{sheet.potty2Time}}</td>
+                            <td>{{sheet.diaper2Description}} {{sheet.potty2Description}}</td>
                         </tr>
                         <tr>
-                            <td class="hygiene-time"></td>
-                            <td></td>
+                            <td class="hygiene-time">{{sheet.diaper3Time}} {{sheet.potty3Time}}</td>
+                            <td>{{sheet.diaper3Description}} {{sheet.potty3Description}}</td>
                         </tr>
                         <tr>
-                            <td class="hygiene-time"></td>
-                            <td></td>
+                            <td class="hygiene-time">{{sheet.diaper4Time}} {{sheet.potty4Time}}</td>
+                            <td>{{sheet.diaper4Description}} {{sheet.potty4Description}}</td>
                         </tr>
                         <tr>
-                            <td class="hygiene-time"></td>
-                            <td></td>
+                            <td class="hygiene-time">{{sheet.diaper5Time}} {{sheet.potty5Time}}</td>
+                            <td>{{sheet.diaper5Description}} {{sheet.potty5Description}}</td>
                         </tr>
                         <tr>
-                            <td class="hygiene-time"></td>
-                            <td></td>
+                            <td class="hygiene-time">{{sheet.diaper6Time}} {{sheet.potty6Time}}</td>
+                            <td>{{sheet.diaper6Description}} {{sheet.potty6Description}}</td>
                         </tr>
                     </table>
                 </div>
@@ -110,10 +110,10 @@
                     <table class="nap-table">
                        <tr>
                             <td class="nap-header text-center">Nap 1</td>
-                            <td>Start</td>
-                            <td>10:00</td>
-                            <td>End</td>
-                            <td>12:00</td>
+                            <td>{{sheet.nap1Start}}</td>
+                            <td>{{sheet.nap1End}}</td>
+                            <td>{{sheet.nap2Start}}</td>
+                            <td>{{sheet.nap2End}}</td>
                        </tr>
                        <tr>
                             <td class="nap-header text-center">Nap 2</td>
@@ -129,12 +129,12 @@
             <div class="card-group activity-needs col-md-6 offset-md-3 offset-md-3">
                 <div class="card">
                     <div class="card-header">Activity </div>
-                    <div class=card-body></div>
+                    <div class=card-body>{{sheet.needs}}</div>
                 </div>
 
                 <div class="card">
                     <div class="card-header">Needs </div>
-                    <div class=card-body></div>
+                    <div class=card-body>{{sheet.activity}}</div>
                 </div>
             </div>
 

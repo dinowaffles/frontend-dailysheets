@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Sheet } from '../sheet';
-import { SheetService } from '../sheet.service';
+import { Student } from '../student';
+import { StudentService } from '../student.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,9 +10,19 @@ import { Router } from '@angular/router';
 })
 export class ParentComponent implements OnInit {
 
-  constructor() { }
+  students: Student[] | undefined;
+
+  constructor(private studentService: StudentService, 
+    private router: Router) { }
 
   ngOnInit(): void {
+    this.getStudents();
+  }
+
+  private getStudents() {
+    this.studentService.getStudentList().subscribe(data => {
+      this.students = data;
+    });
   }
 
 }

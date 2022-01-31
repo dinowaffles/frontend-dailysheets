@@ -3,13 +3,10 @@
         <div class="row">
             <h3 class="text-center"> Student's Daily Sheets </h3>
             <hr />
-            <div class="card-body">
-                <button routerLink="/student/1" class ="btn btn-primary">
-                    Student1</button><br><br>
-                
-                <button routerLink="/student/2" class ="btn btn-primary">
-                    Student2</button>
-                
+            <div class="card-body" *ngFor="let student of students">
+                <button routerLink="/student/{{student.id}}" class ="btn btn-primary">
+                    {{student.name}}</button><br><br>
+
             </div>
         </div>
     </div>
