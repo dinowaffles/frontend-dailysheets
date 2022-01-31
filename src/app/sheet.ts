@@ -1,6 +1,7 @@
 export class Sheet {
     id!: number;
-    name: string | undefined;
+    studentName: string | undefined;
+    classroom: string | undefined;
     date: string | undefined;
     feeding1Time: string | undefined;
     feeding1Amt: number | undefined;
