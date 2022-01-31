@@ -39,7 +39,7 @@ const routes: Routes = [
     component: TeacherStudentAddComponent,
   },
   {
-    path: 'classroom/:id/student/:id',
+    path: 'student/update/:id',
     component: TeacherStudentComponent,
   },
 

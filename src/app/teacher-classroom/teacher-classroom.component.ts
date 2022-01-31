@@ -26,7 +26,7 @@ export class TeacherClassroomComponent implements OnInit {
   }
 
   updateSheet(id: number) {
-    this.router.navigate(['/classroom/:id/student', id]);
+    this.router.navigate(['/student/update', id]);
   }
 
 }

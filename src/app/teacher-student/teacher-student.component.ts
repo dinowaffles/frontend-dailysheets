@@ -20,7 +20,6 @@ export class TeacherStudentComponent implements OnInit {
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
 
-    this.sheet = new Sheet();
     this.sheetService.getSheetById(this.id).subscribe(data => {
       this.sheet = data;
     });
