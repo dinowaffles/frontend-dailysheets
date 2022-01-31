@@ -29,10 +29,23 @@ table, td {
     font-family: 'Roboto', sans-serif;
 }
 
-.food-table, .nap-table {
+.food-table, .nap-table, .hygiene-table {
     width: 100%;
 }
 
 .bottles-table, .meals-table {
     width: 100%;
+}
+
+.hygiene-time, .meal-desc {
+    width: 25%;
+}
+
+.hygiene-header {
+    font-weight: bold;
+}
+
+.nap-header {
+    width: 15%;
+    font-weight: bold;
 }
