@@ -12,6 +12,7 @@ import { StudentDeleteComponent } from './student-delete/student-delete.componen
 import { StudentListComponent } from './student-list/student-list.component';
 import { StudentUpdateComponent } from './student-update/student-update.component';
 import { TeacherClassroomComponent } from './teacher-classroom/teacher-classroom.component';
+import { TeacherStudentAddComponent } from './teacher-student-add/teacher-student-add.component';
 import { TeacherStudentComponent } from './teacher-student/teacher-student.component';
 import { TeacherComponent } from './teacher/teacher.component';
 
@@ -32,6 +33,10 @@ const routes: Routes = [
   {
     path: 'classroom/:id',
     component: TeacherClassroomComponent,
+  },
+  {
+    path: 'classroom/:id/add',
+    component: TeacherStudentAddComponent,
   },
   {
     path: 'classroom/:id/student/:id',

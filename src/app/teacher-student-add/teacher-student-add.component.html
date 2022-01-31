@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="card col-md-6 offset-md-3 offset-md-3">
+        <div class="row">
+            <h3 class="text-center"> Add A Student's Daily Sheet </h3>
+            <hr />
+            <div class="card-body">
+                <form (ngSubmit)="onSubmit()">
+
+                    <div class="form-group">
+                        <label> Name </label>
+                        <input type="text" class="form-control" id="name" 
+                            [(ngModel)]="sheet.studentName"
+                            name="name">
+                    </div>
+
+                    <div class="form-group">
+                        <label> Classroom </label>
+                        <input type="text" class="form-control" id="classroom" 
+                            [(ngModel)]="sheet.classroom"
+                            name="classroom">
+                    </div>
+
+
+                    <br />
+                    <button class="btn btn-success" type="submit">Submit</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

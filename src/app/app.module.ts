@@ -22,6 +22,7 @@ import { AdminComponent } from './admin/admin.component';
 import { TeacherClassroomComponent } from './teacher-classroom/teacher-classroom.component';
 import { LandingComponent } from './landing/landing.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { TeacherStudentAddComponent } from './teacher-student-add/teacher-student-add.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     AdminComponent,
     TeacherClassroomComponent,
     LandingComponent,
-    NavbarComponent
+    NavbarComponent,
+    TeacherStudentAddComponent
   ],
   imports: [
     BrowserModule,

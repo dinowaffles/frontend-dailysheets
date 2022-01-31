@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ClassroomService } from '../classroom.service';
-import { Classroom } from '../classroom';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Sheet } from '../sheet';
+import { SheetService } from '../sheet.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-teacher-classroom',
@@ -10,20 +10,23 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class TeacherClassroomComponent implements OnInit {
 
-  id!: number;
-  classroom: Classroom = new Classroom();
+  sheets: Sheet[] | undefined;
 
-  constructor(private classroomService: ClassroomService, 
-    private route: ActivatedRoute, private router: Router) { }
+  constructor(private sheetService: SheetService, 
+    private router: Router) { }
 
   ngOnInit(): void {
-    this.id = this.route.snapshot.params['id'];
+    this.getSheets();
+  }
 
-    this.classroomService.getClassroomById(this.id).subscribe(data => {
-      this.classroom = data;
-    }, 
-    // error => console.log(error)
-    );
+  private getSheets() {
+    this.sheetService.getSheetList().subscribe(data => {
+      this.sheets = data;
+    });
+  }
+
+  updateSheet(id: number) {
+    this.router.navigate(['/classroom/:id/student', id]);
   }
 
 }
