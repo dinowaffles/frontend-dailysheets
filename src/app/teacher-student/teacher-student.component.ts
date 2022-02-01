@@ -12,6 +12,7 @@ export class TeacherStudentComponent implements OnInit {
 
   id!: number;
   sheet: Sheet = new Sheet();
+  sheets: Sheet[] | undefined;
 
   constructor(private route: ActivatedRoute, private router: Router, 
     private sheetService: SheetService) { }
@@ -24,14 +25,22 @@ export class TeacherStudentComponent implements OnInit {
     }, 
     // error => console.log(error)
     );
+    this.getSheets();
   }
 
   onSubmit() {
+    this.getSheets();
     this.sheetService.updateSheet(this.id, this.sheet).subscribe(data => {
       this.refreshStudent();
     }, 
     // error => console.log(error)
     )
+  }
+
+  private getSheets() {
+    this.sheetService.getSheetList().subscribe(data => {
+      this.sheets = data;
+    });
   }
 
   refreshStudent() {

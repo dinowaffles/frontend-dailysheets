@@ -1,21 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 
-.row {
-    font-family: 'Roboto', sans-serif;
-    padding-top: 16px; 
+.whole-page {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    padding-top: 20px;
 }
 
-.text-center {
+.sidebar {
+    grid-column: 1;
+    padding-left: 30px; 
+}
+
+.main-panel {
+    grid-column: 2;
+    padding-top: 20px;
+}
+
+.sidebar-btn {
+    background-color: #f5c0b8 !important;
+    border-color: #B75741 !important;
+}
+
+h3, h4 {
     font-family: 'Acme', sans-serif;
 }
 
 .btn-success {
-    background-color: #f7cc7f !important;
-    border-color: black !important;
+    background-color: #51bfa6 !important;
+    border-color: #184655 !important;
     color: black !important;
 }
 
 .btn-success:hover{
-    background-color: #fbe0b3 !important;
+    background-color: #96d9c8 !important;
 }

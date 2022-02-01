@@ -1,6 +1,10 @@
-<div>
+<div class="whole-page">
     <div class="sidebar">
-
+        <h4>Students: </h4>
+        <div *ngFor="let sheet of sheets; index as i">
+            <button routerLink="/student/update/{{sheet.id}}" class ="btn sidebar-btn" >
+                {{sheet.studentName}}</button>
+        </div>
     </div>
 
 <div class="row">
@@ -26,7 +30,7 @@
                         </div>
                         <input type="text" class="form-control" placeholder="feedingTime">
                         <div class="input-group-prepend">
-                            <span class="input-group-text">to</span>
+                            <span class="input-group-text">Amt(oz)</span>
                         </div>
                         <input type="text" class="form-control" placeholder="amt(oz)">
                     </div>
@@ -36,7 +40,7 @@
                         </div>
                         <input type="text" class="form-control" placeholder="feedingTime">
                         <div class="input-group-prepend">
-                            <span class="input-group-text">to</span>
+                            <span class="input-group-text">Amt(oz)</span>
                         </div>
                         <input type="text" class="form-control" placeholder="amt(oz)">
                     </div>
@@ -46,7 +50,7 @@
                         </div>
                         <input type="text" class="form-control" placeholder="feedingTime">
                         <div class="input-group-prepend">
-                            <span class="input-group-text">to</span>
+                            <span class="input-group-text">Amt(oz)</span>
                         </div>
                         <input type="text" class="form-control" placeholder="amt(oz)">
                     </div>
@@ -56,7 +60,7 @@
                         </div>
                         <input type="text" class="form-control" placeholder="feedingTime">
                         <div class="input-group-prepend">
-                            <span class="input-group-text">to</span>
+                            <span class="input-group-text">Amt(oz)</span>
                         </div>
                         <input type="text" class="form-control" placeholder="amt(oz)">
                     </div>
@@ -66,7 +70,7 @@
                         </div>
                         <input type="text" class="form-control" placeholder="feedingTime">
                         <div class="input-group-prepend">
-                            <span class="input-group-text">to</span>
+                            <span class="input-group-text">Amt(oz)</span>
                         </div>
                         <input type="text" class="form-control" placeholder="amt(oz)">
                     </div>
