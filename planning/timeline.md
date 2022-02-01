@@ -18,13 +18,13 @@
 - Day 6 (Mon): Frontend: Work on pushing data to api
 
 
-- Day 7 (Tue): Frontend: Styling
+- Day 7 (Tue): Frontend/Backend: updating dailysheet
 
 
-- Day 8 (Wed): Frontend: Deployment
+- Day 8 (Wed): Frontend: Styling, Deployment
 
 
-- Day 9 (Thur):  Bonus Items
+- Day 9 (Thur):  Documentation; Presentation
 
 
 - Day 10 (Fri): Presentation

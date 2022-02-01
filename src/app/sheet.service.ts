@@ -25,7 +25,7 @@ export class SheetService {
   }
 
   updateSheet(id: number, sheet: Sheet): Observable<Object>{
-    return this.http.put(`${this.baseURL}/${id}`, sheet);
+    return this.http.patch(`${this.baseURL}/${id}`, sheet);
   }
 
   deleteSheet(id: number): Observable<Object>{

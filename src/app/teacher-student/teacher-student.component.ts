@@ -29,7 +29,7 @@ export class TeacherStudentComponent implements OnInit {
   }
 
   onSubmit() {
-    this.getSheets();
+
     this.sheetService.updateSheet(this.id, this.sheet).subscribe(data => {
       this.refreshStudent();
     }, 
@@ -44,7 +44,8 @@ export class TeacherStudentComponent implements OnInit {
   }
 
   refreshStudent() {
-    this.router.navigate(['/student/update']);
+    // this.router.navigate([`/student/update/${this.id}`]);
+    window.location.reload();
   }
 
 }

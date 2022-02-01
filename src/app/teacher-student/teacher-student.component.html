@@ -11,16 +11,20 @@
     <div class="card col-md-6 offset-md-3 offset-md-3">
         <div class="row">
             <form (ngSubmit)="onSubmit()">
+                <button class="btn btn-success" type="submit" >Save Changes</button><br><br>
                 <div class="name-date">
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Name</span>
                         </div>
-                        <input type="text" class="form-control" value="{{sheet.studentName}}">
+                        <input type="text" class="form-control" value={{sheet.studentName}} 
+                            name="studentName" [(ngModel)]="sheet.studentName">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Date</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="todaysDate">
+                        <input type="text" class="form-control" 
+                            placeholder="todaysDate" value={{sheet.date}}
+                            name="date" [(ngModel)]="sheet.date">
                     </div>
                 </div>
                 <div class="bottles"> Bottles
@@ -28,51 +32,71 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text">Bottle 1</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="feedingTime">
+                        <input type="text" class="form-control" 
+                            placeholder="time" value={{sheet.feeding1Time}}
+                            name="feeding1Time" [(ngModel)]="sheet.feeding1Time">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Amt(oz)</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="amt(oz)">
+                        <input type="text" class="form-control" 
+                            placeholder="oz" value={{sheet.feeding1Amt}}
+                            name="feeding1Amt" [(ngModel)]="sheet.feeding1Amt">
                     </div>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Bottle 2</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="feedingTime">
+                        <input type="text" class="form-control" 
+                            placeholder="time" value={{sheet.feeding2Time}}
+                            name="feeding2Time" [(ngModel)]="sheet.feeding2Time">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Amt(oz)</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="amt(oz)">
+                        <input type="text" class="form-control" 
+                            placeholder="oz" value={{sheet.feeding2Amt}}
+                            name="feeding2Amt" [(ngModel)]="sheet.feeding2Amt">
                     </div>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Bottle 3</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="feedingTime">
+                        <input type="text" class="form-control" 
+                            placeholder="time" value={{sheet.feeding3Time}}
+                            name="feeding3Time" [(ngModel)]="sheet.feeding3Time">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Amt(oz)</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="amt(oz)">
+                        <input type="text" class="form-control" 
+                            placeholder="oz" value={{sheet.feeding3Amt}}
+                            name="feeding3Amt" [(ngModel)]="sheet.feeding3Amt">
                     </div>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Bottle 4</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="feedingTime">
+                        <input type="text" class="form-control" 
+                            placeholder="time" value={{sheet.feeding4Time}}
+                            name="feeding4Time" [(ngModel)]="sheet.feeding4Time">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Amt(oz)</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="amt(oz)">
+                        <input type="text" class="form-control" 
+                            placeholder="oz" value={{sheet.feeding4Amt}}
+                            name="feeding4Amt" [(ngModel)]="sheet.feeding4Amt">
                     </div>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Bottle 5</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="feedingTime">
+                        <input type="text" class="form-control" 
+                            placeholder="time" value={{sheet.feeding5Time}}
+                            name="feeding5Time" [(ngModel)]="sheet.feeding5Time">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Amt(oz)</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="amt(oz)">
+                        <input type="text" class="form-control" 
+                            placeholder="oz" value={{sheet.feeding5Amt}}
+                            name="feeding5Amt" [(ngModel)]="sheet.feeding5Amt">
                     </div>
                 </div>
                 <div class="meals"> Meals
@@ -131,9 +155,10 @@
                 <div class="hygiene"> Diapers/Potty
                     <div class="input-group">
                         <div class="input-group-prepend">
-                            <span class="input-group-text">Diaper/Potty 1</span>
+                            <span class="input-group-text">Time</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="time">
+                        <input type="text" class="form-control" value={{sheet.potty1Time}}
+                            name="potty1Time" [(ngModel)]="sheet.potty1Time">
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox">
                             <label class="form-check-label">Pee</label>
@@ -141,6 +166,10 @@
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox">
                             <label class="form-check-label">BM</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox">
+                            <label class="form-check-label">Dry</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox">
@@ -153,9 +182,10 @@
                     </div>
                     <div class="input-group">
                         <div class="input-group-prepend">
-                            <span class="input-group-text">Diaper/Potty 2</span>
+                            <span class="input-group-text">Time</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="time">
+                        <input type="text" class="form-control" value={{sheet.potty2Time}}
+                            name="potty2Time" [(ngModel)]="sheet.potty2Time">
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox">
                             <label class="form-check-label">Pee</label>
@@ -163,6 +193,10 @@
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox">
                             <label class="form-check-label">BM</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox">
+                            <label class="form-check-label">Dry</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox">
@@ -175,9 +209,10 @@
                     </div>
                     <div class="input-group">
                         <div class="input-group-prepend">
-                            <span class="input-group-text">Diaper/Potty 3</span>
+                            <span class="input-group-text">Time</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="time">
+                        <input type="text" class="form-control" value={{sheet.potty3Time}}
+                            name="potty3Time" [(ngModel)]="sheet.potty3Time">
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox">
                             <label class="form-check-label">Pee</label>
@@ -185,6 +220,10 @@
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox">
                             <label class="form-check-label">BM</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox">
+                            <label class="form-check-label">Dry</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox">
@@ -197,9 +236,10 @@
                     </div>
                     <div class="input-group">
                         <div class="input-group-prepend">
-                            <span class="input-group-text">Diaper/Potty 4</span>
+                            <span class="input-group-text">Time</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="time">
+                        <input type="text" class="form-control" value={{sheet.potty4Time}}
+                            name="potty4Time" [(ngModel)]="sheet.potty4Time">
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox">
                             <label class="form-check-label">Pee</label>
@@ -207,6 +247,10 @@
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox">
                             <label class="form-check-label">BM</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox">
+                            <label class="form-check-label">Dry</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox">
@@ -219,9 +263,10 @@
                     </div>
                     <div class="input-group">
                         <div class="input-group-prepend">
-                            <span class="input-group-text">Diaper/Potty 5</span>
+                            <span class="input-group-text">Time</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="time">
+                        <input type="text" class="form-control" value={{sheet.potty5Time}}
+                            name="potty5Time" [(ngModel)]="sheet.potty5Time">
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox">
                             <label class="form-check-label">Pee</label>
@@ -229,6 +274,10 @@
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox">
                             <label class="form-check-label">BM</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox">
+                            <label class="form-check-label">Dry</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox">
@@ -241,9 +290,10 @@
                     </div>
                     <div class="input-group">
                         <div class="input-group-prepend">
-                            <span class="input-group-text">Diaper/Potty 6</span>
+                            <span class="input-group-text">Time</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="time">
+                        <input type="text" class="form-control" value={{sheet.potty6Time}}
+                            name="potty6Time" [(ngModel)]="sheet.potty6Time">
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox">
                             <label class="form-check-label">Pee</label>
@@ -251,6 +301,10 @@
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox">
                             <label class="form-check-label">BM</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox">
+                            <label class="form-check-label">Dry</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox">
@@ -268,21 +322,29 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text">Nap 1</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="napStart">
+                        <input type="text" class="form-control" 
+                            placeholder="startTime" value={{sheet.nap1Start}}
+                            name="nap1Start" [(ngModel)]="sheet.nap1Start">
                         <div class="input-group-prepend">
                             <span class="input-group-text">to</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="napEnd">
+                        <input type="text" class="form-control" 
+                            placeholder="endTime" value={{sheet.nap1End}}
+                            name="nap1End" [(ngModel)]="sheet.nap1End">
                     </div>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Nap 2</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="napStart">
+                        <input type="text" class="form-control" 
+                            placeholder="startTime" value={{sheet.nap2Start}}
+                            name="nap2Start" [(ngModel)]="sheet.nap2Start">
                         <div class="input-group-prepend">
                             <span class="input-group-text">to</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="napEnd">
+                        <input type="text" class="form-control" 
+                            placeholder="endTime" value={{sheet.nap2End}}
+                            name="nap2End" [(ngModel)]="sheet.nap2End">
                     </div>
                 </div>
                 <div class="activity-needs">
@@ -290,14 +352,18 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text">Activity</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="activity">
+                        <input type="text" class="form-control" 
+                            placeholder="activity" value={{sheet.activity}}
+                            name="activity" [(ngModel)]="sheet.activity">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Needs</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="needs">
+                        <input type="text" class="form-control" 
+                            placeholder="needs" value={{sheet.needs}}
+                            name="needs" [(ngModel)]="sheet.needs">
                     </div>
                 </div><br>
-                <button class="btn btn-success" type="submit">Save Changes</button>
+                <button class="btn btn-success" type="submit" >Save Changes</button>
             </form>
         </div>
     </div>
