@@ -1,11 +1,11 @@
 <div class="row">
     <div class="card col-md-6 offset-md-3 offset-md-3">
         <div class="row">
-            <h3 class="text-center"> Child Daily Sheets </h3>
+            <h3 class="header text-center"> Child Daily Sheets </h3>
             <hr />
-            <div class="card-body" *ngFor="let sheet of sheets">
+            <div class="card-body text-center" *ngFor="let sheet of sheets">
                 <button routerLink="/student/{{sheet.id}}" class ="btn btn-primary">
-                    {{sheet.studentName}}</button><br><br>
+                    {{sheet.studentName}}</button><br>
 
             </div>
         </div>

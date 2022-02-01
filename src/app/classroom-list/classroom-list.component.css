@@ -6,8 +6,9 @@
     padding-top: 16px; 
 }
 
-.header {
+h3 {
     font-family: 'Acme', sans-serif;
+    padding-top: 20px;
 }
 
 .btn-primary {

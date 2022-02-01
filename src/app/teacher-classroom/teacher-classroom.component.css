@@ -1,11 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+.whole-page {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+}
+
+.sidebar {
+    grid-column: 1;
+    padding-left: 30px; 
+    padding-top: 20px; 
+
+}
+
+.main-panel {
+    grid-column: 2;
+}
+
+.sidebar-btn {
+    background-color: #FBE0B3 !important;
+    border-color: #F48c80 !important;
+}
+
 .row {
     font-family: 'Roboto', sans-serif;
     padding-top: 16px; 
 }
 
-.text-center {
+h3, h4 {
     font-family: 'Acme', sans-serif;
 }
 

@@ -10,11 +10,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class TeacherStudentComponent implements OnInit {
 
-  sheets: Sheet[] | undefined;
   id!: number;
-  sheet!: Sheet;
+  sheet: Sheet = new Sheet();
 
-  constructor(private route: ActivatedRoute, 
+  constructor(private route: ActivatedRoute, private router: Router, 
     private sheetService: SheetService) { }
 
   ngOnInit(): void {
@@ -22,7 +21,21 @@ export class TeacherStudentComponent implements OnInit {
 
     this.sheetService.getSheetById(this.id).subscribe(data => {
       this.sheet = data;
-    });
+    }, 
+    // error => console.log(error)
+    );
+  }
+
+  onSubmit() {
+    this.sheetService.updateSheet(this.id, this.sheet).subscribe(data => {
+      this.refreshStudent();
+    }, 
+    // error => console.log(error)
+    )
+  }
+
+  refreshStudent() {
+    this.router.navigate(['/student/update']);
   }
 
 }
