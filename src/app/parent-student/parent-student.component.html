@@ -8,18 +8,17 @@
         <div class="card-columns">
             <div class="card-group name-date col-md-6 offset-md-3 offset-md-3">
                 <div class="card">
-                    <div class="card-header">Name: </div>
+                    <div class="card-header name-header">Name: </div>
                     <div class=card-body>{{sheet.studentName}}</div>
                 </div>
                 <div class="card">
-                    <div class="card-header">Date: </div>
+                    <div class="card-header date-header">Date: </div>
                     <div class=card-body>{{sheet.date}}</div>
                 </div>
             </div>
 
             <div class="card food col-md-6 offset-md-3 offset-md-3">
-                <div class="card-header">Food
-                </div>
+                <div class="card-header food-header">Food</div>
                 <div class="card-body">
                     <table class="food-table">
                         <tr>
@@ -67,11 +66,10 @@
             </div>
 
             <div class="card hygiene col-md-6 offset-md-3 offset-md-3">
-                <div class="card-header">Hygiene
-                </div>
+                <div class="card-header hygiene-header">Hygiene</div>
                 <div class="card-body">
                     <table class="hygiene-table">
-                        <tr class="hygiene-header">
+                        <tr >
                             <td class="hygiene-time text-center">Time</td>
                             <td class="text-center">Description</td>
                         </tr>
@@ -104,8 +102,7 @@
             </div>
 
             <div class="card sleep col-md-6 offset-md-3 offset-md-3">
-                <div class="card-header">Naps
-                </div>
+                <div class="card-header naps-header">Naps</div>
                 <div class="card-body">
                     <table class="nap-table">
                        <tr>
@@ -126,12 +123,12 @@
 
             <div class="card-group activity-needs col-md-6 offset-md-3 offset-md-3">
                 <div class="card">
-                    <div class="card-header">Activity </div>
+                    <div class="card-header activity-header">Activity </div>
                     <div class=card-body>{{sheet.activity}}</div>
                 </div>
 
                 <div class="card">
-                    <div class="card-header">Needs </div>
+                    <div class="card-header needs-header">Needs </div>
                     <div class=card-body>{{sheet.needs}}</div>
                 </div>
             </div>

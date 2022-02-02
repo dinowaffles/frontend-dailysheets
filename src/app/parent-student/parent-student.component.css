@@ -49,3 +49,31 @@ table, td {
     width: 15%;
     font-weight: bold;
 }
+
+.name-header {
+    background-color: #F5c0b8!important;
+}
+
+.date-header {
+    background-color: #96D9c8!important;
+}
+
+.food-header {
+    background-color: #fbe0b3!important;
+}
+
+.hygiene-header {
+    background-color: #9cc1f8!important;
+}
+
+.naps-header {
+    background-color: #F5c0b8!important;
+}
+
+.activity-header {
+    background-color: #96D9c8!important;
+}
+
+.needs-header {
+    background-color: #fbe0b3!important;
+}
