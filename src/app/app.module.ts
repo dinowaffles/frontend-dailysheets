@@ -23,6 +23,7 @@ import { TeacherClassroomComponent } from './teacher-classroom/teacher-classroom
 import { LandingComponent } from './landing/landing.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { TeacherStudentAddComponent } from './teacher-student-add/teacher-student-add.component';
+import { OrderbyPipe } from './orderby.pipe';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { TeacherStudentAddComponent } from './teacher-student-add/teacher-studen
     TeacherClassroomComponent,
     LandingComponent,
     NavbarComponent,
-    TeacherStudentAddComponent
+    TeacherStudentAddComponent,
+    OrderbyPipe
   ],
   imports: [
     BrowserModule,

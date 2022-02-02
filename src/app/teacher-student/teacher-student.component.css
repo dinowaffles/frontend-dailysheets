@@ -14,12 +14,18 @@
 
 .main-panel {
     grid-column: 2;
-    padding-top: 20px;
+
+}
+
+form {
+    padding-top: 20px; 
+    padding-bottom: 20px; 
 }
 
 .sidebar-btn {
     background-color: #f5c0b8 !important;
     border-color: #B75741 !important;
+    width: 90%;
 }
 
 h3, h4 {
@@ -30,8 +36,24 @@ h3, h4 {
     background-color: #51bfa6 !important;
     border-color: #184655 !important;
     color: black !important;
+    width: 25%;
+    float: left;
 }
 
 .btn-success:hover{
     background-color: #96d9c8 !important;
 }
+
+.btn-reset {
+    background-color: #f7cc80 !important;
+    border-color: black !important;
+    color: black !important;
+    width: 25%;
+    float: right;
+}
+
+.btn-reset:hover {
+    background-color: #fbe0b3 !important;
+}
+
+

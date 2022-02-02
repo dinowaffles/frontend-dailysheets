@@ -3,7 +3,7 @@
         <div class="row">
             <h3 class="header text-center"> Child Daily Sheets </h3>
             <hr />
-            <div class="card-body text-center" *ngFor="let sheet of sheets">
+            <div class="card-body text-center" *ngFor="let sheet of sheets | orderby: sheets; let i = index">
                 <button routerLink="/student/{{sheet.id}}" class ="btn btn-primary">
                     {{sheet.studentName}}</button><br>
 

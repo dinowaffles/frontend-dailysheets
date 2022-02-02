@@ -2,15 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { Sheet } from '../sheet';
 import { SheetService } from '../sheet.service';
 import { Router } from '@angular/router';
+import { OrderbyPipe } from '../orderby.pipe';
 
 @Component({
   selector: 'app-parent',
   templateUrl: './parent.component.html',
-  styleUrls: ['./parent.component.css']
+  styleUrls: ['./parent.component.css'],
 })
 export class ParentComponent implements OnInit {
 
-  sheets: Sheet[] | undefined;
+  sheets!: Sheet[];
 
   constructor(private sheetService: SheetService, 
     private router: Router) { }

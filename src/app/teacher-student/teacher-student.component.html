@@ -10,9 +10,11 @@
 <div class="row">
     <div class="card col-md-6 offset-md-3 offset-md-3">
         <div class="row">
-            <form (ngSubmit)="onSubmit()">
-                <button class="btn btn-success" type="submit" >Save Changes</button><br><br>
+            <form (ngSubmit)="onSubmit()" class="text-center">
+                <button class="btn btn-success" type="submit" >Save Changes</button>
+                <button class="btn btn-reset" type="reset">Reset</button><br><br>
                 <div class="name-date">
+                    <h4>Name & Date</h4>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Name</span>
@@ -26,8 +28,9 @@
                             placeholder="todaysDate" value={{sheet.date}}
                             name="date" [(ngModel)]="sheet.date">
                     </div>
-                </div>
-                <div class="bottles"> Bottles
+                </div><br>
+                <div class="bottles">
+                    <h4>Bottles</h4>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Bottle 1</span>
@@ -98,8 +101,9 @@
                             placeholder="oz" value={{sheet.feeding5Amt}}
                             name="feeding5Amt" [(ngModel)]="sheet.feeding5Amt">
                     </div>
-                </div>
-                <div class="meals"> Meals
+                </div><br>
+                <div class="meals">
+                    <h4>Meals</h4>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Breakfast</span>
@@ -124,22 +128,9 @@
                             placeholder="snackAmt" value={{sheet.snackAmt}}
                             name="snackAmt" [(ngModel)]="sheet.snackAmt">
                     </div>
-                </div>
-                <div class="hygiene"> Diapers/Potty
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Time</span>
-                        </div>
-                        <input type="text" class="form-control" 
-                            placeholder="time" value={{sheet.potty1Time}}
-                            name="potty1Time" [(ngModel)]="sheet.potty1Time">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Descr</span>
-                        </div>
-                        <input type="text" class="form-control" 
-                            placeholder="Pee/BM/Dry/Tried/Accident" value={{sheet.potty1Description}}
-                            name="potty1Description" [(ngModel)]="sheet.potty1Description">
-                    </div>
+                </div><br>
+                <div class="hygiene">
+                    <h4>Diapers/Potty</h4>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Time</span>
@@ -224,8 +215,9 @@
                             placeholder="Pee/BM/Dry/Tried/Accident" value={{sheet.potty6Description}}
                             name="potty6Description" [(ngModel)]="sheet.potty6Description">
                     </div>
-                </div>
-                <div class="naps"> Naps
+                </div><br>
+                <div class="naps">
+                    <h4>Naps</h4>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Nap 1</span>
@@ -254,8 +246,9 @@
                             placeholder="endTime" value={{sheet.nap2End}}
                             name="nap2End" [(ngModel)]="sheet.nap2End">
                     </div>
-                </div>
+                </div><br>
                 <div class="activity-needs">
+                    <h4>Activity & Needs</h4>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Activity</span>
