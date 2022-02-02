@@ -29,12 +29,22 @@ export class TeacherStudentComponent implements OnInit {
   }
 
   onSubmit() {
-
     this.sheetService.updateSheet(this.id, this.sheet).subscribe(data => {
       this.refreshStudent();
     }, 
     // error => console.log(error)
     )
+  }
+
+  sidebarClick() {
+    this.id = this.route.snapshot.params['id'];
+
+    this.sheetService.getSheetById(this.id).subscribe(data => {
+      this.sheet = data;
+    }, 
+    // error => console.log(error)
+    );
+    this.getSheets();
   }
 
   private getSheets() {
