@@ -8,7 +8,7 @@ import { Sheet } from './sheet';
 })
 export class SheetService {
 
-  private baseURL = "http://localhost:9092/api/sheet";
+  private baseURL = "environment.baseURL";
 
   constructor(private http: HttpClient) { }
 

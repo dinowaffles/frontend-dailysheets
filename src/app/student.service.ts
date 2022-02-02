@@ -8,7 +8,7 @@ import { Student } from './../app/student'
 })
 export class StudentService {
 
-  private baseURL = "http://localhost:9092/api/student"
+  private baseURL = "environment.baseURL"
 
   constructor(private http: HttpClient) { }
 
