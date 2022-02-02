@@ -19,3 +19,14 @@
 .btn-success:hover{
     background-color: #fbe0b3 !important;
 }
+
+.btn-cancel {
+    background-color: #F47457 !important;
+    border-color: black !important;
+    color: black !important;
+    float: right;
+}
+
+.btn-cancel:hover {
+    background-color: #F5c0b8 !important;
+}

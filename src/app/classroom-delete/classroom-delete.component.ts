@@ -28,14 +28,14 @@ export class ClassroomDeleteComponent implements OnInit {
 
   onSubmit() {
     this.classroomService.deleteClassroom(this.id).subscribe(data => {
-      this.goToClassroomList();
+      this.goToAdminClassroomList();
     }, 
     // error => console.log(error)
     );
   }
 
-  goToClassroomList() {
-    this.router.navigate(['/classroom']);
+  goToAdminClassroomList() {
+    this.router.navigate(['/admin/classroom']);
   }
 
 }
