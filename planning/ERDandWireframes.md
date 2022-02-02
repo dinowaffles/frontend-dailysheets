@@ -1,5 +1,6 @@
 ## ERD Diagram
-Each daily sheet will belong to only one student. However, students will have a new daily sheet for each day they are present at daycare. Each student will belong to only one classroom, but each classroom will have many students. 
+Planning: Each daily sheet will belong to only one student. However, students will have a new daily sheet for each day they are present at daycare. Each student will belong to only one classroom, but each classroom will have many students. 
+Result: In the end, the OneToMany mapping wasn't functioning how I wanted it to, and it was not essential to have each model interconnected as such. I may attempt to do so in the future, but in the project as it stands, each model is a standalone entity.
 ![ERD Diagram](/src/assets/images/erd-diagram.png)
 
 ## Wireframes
