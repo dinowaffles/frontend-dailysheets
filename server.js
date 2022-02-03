@@ -16,10 +16,9 @@ const app = express();
 // app.use(requireHTTPS);
 app.use(express.static(__dirname + './dist/dailysheets-frontend'));
 
-// Start the app by listening on the default Heroku port
-app.listen(process.env.PORT || 8080);
-
 app.get('/*', function(req,res) {
     res.sendFile(path.join(__dirname+'./dist/dailysheets-frontend/index.html'));
 });
 
+// Start the app by listening on the default Heroku port
+app.listen(process.env.PORT || 8080);
