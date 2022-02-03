@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class StudentService {
 
-  private baseURL = `${environment.baseURL}/api/student`
+  private baseURL = `${environment.baseURL}api/student`
 
   constructor(private http: HttpClient) { }
 
